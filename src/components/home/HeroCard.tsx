@@ -35,7 +35,7 @@ const HeroCard = () => {
   }, [controls]);
 
   return (
-    <div className="bg-[#191e20] text-white">
+    <div className="bg-[#191e20] text-white ">
       <div className="relative">
         <div>
           <motion.img
@@ -47,7 +47,7 @@ const HeroCard = () => {
             variants={parent}
           />
         </div>
-        <div className="absolute top-0 w-full h-[700px] bg-gradient-to-r from-black via-black/80 to-transparent">
+        <div className="absolute top-0 w-full h-[700px] bg-gradient-to-r from-black via-black/80 to-transparent ">
           <Container>
             <motion.h1
               initial="hidden"
