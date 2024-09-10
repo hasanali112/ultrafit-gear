@@ -1,9 +1,9 @@
-import HeroCard from "./HeroCard";
+import TestHero from "./TestHero";
 
 const HeroSection = () => {
   return (
     <div>
-      <HeroCard />
+      <TestHero />
     </div>
   );
 };

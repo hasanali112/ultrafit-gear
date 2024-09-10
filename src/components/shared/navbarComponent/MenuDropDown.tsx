@@ -45,31 +45,33 @@ const MenuDropDown = () => {
       <motion.div className="relative">
         <button
           onClick={() => setVisible(!visible)}
-          className="bg-[#fbb71c] hover:bg-[#fbb71c] w-8 h-8 rounded-md px-[5px]"
+          className="bg-[#fbb71c] hover:bg-[#fbb71c] w-9 h-9 rounded-md px-[5px]"
         >
           <Menu />
         </button>
-        <motion.div
-          initial="close"
-          animate={visible ? "open" : "close"}
-          variants={dropParent}
-          style={{ originY: 0 }}
-          className="bg-white rounded-md w-[200px] h-[300px] absolute top-12 z-50 text-gray-900"
-        >
-          <motion.ul
-            initial="hidden"
-            animate={visible ? "visible" : "hidden"}
-            variants={dropChildren}
+        <div className="relative">
+          <motion.div
+            initial="close"
+            animate={visible ? "open" : "close"}
+            variants={dropParent}
+            style={{ originY: 0 }}
+            className="bg-white rounded-md w-[200px] h-[300px] absolute top-3  text-gray-900 z-50"
           >
-            <li className="m-[14px]">Weightlifting</li>
-            <hr />
-            <li className="m-[14px]">Cycling</li>
-            <hr />
-            <li className="m-[14px]">Yoga</li>
-            <hr />
-            <li className="m-[14px]">CrossFit</li>
-          </motion.ul>
-        </motion.div>
+            <motion.ul
+              initial="hidden"
+              animate={visible ? "visible" : "hidden"}
+              variants={dropChildren}
+            >
+              <li className="m-[14px]">Weightlifting</li>
+              <hr />
+              <li className="m-[14px]">Cycling</li>
+              <hr />
+              <li className="m-[14px]">Yoga</li>
+              <hr />
+              <li className="m-[14px]">CrossFit</li>
+            </motion.ul>
+          </motion.div>
+        </div>
       </motion.div>
     </Container>
   );
