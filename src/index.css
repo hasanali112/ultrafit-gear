@@ -69,4 +69,10 @@
   html {
     font-family: "Poppins", sans-serif;
   }
+  .text-prime {
+    @apply text-[#fbb71c];
+  }
+  .bg-prime {
+    @apply bg-[#fbb71c];
+  }
 }
