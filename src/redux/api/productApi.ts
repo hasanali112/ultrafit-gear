@@ -4,7 +4,7 @@ const productApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     productGet: build.query({
       query: () => ({
-        url: "/",
+        url: "/products",
         method: "GET",
       }),
     }),
