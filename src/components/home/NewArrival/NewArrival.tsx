@@ -22,11 +22,11 @@ const NewArrival = () => {
   );
 
   return (
-    <div className="mb-32">
-      <Container className="mt-28  mb-5">
+    <div>
+      <Container className="pt-36  mb-5">
         <div>
-          <div className="flex justify-between mb-4">
-            <h1 className="text-4xl font-bold">Features Product</h1>
+          <div className="flex justify-between ">
+            <h1 className="text-3xl font-bold">Features Product</h1>
             <div className="flex gap-5 items-center">
               <button
                 onClick={() => setSell("new")}
@@ -52,11 +52,12 @@ const NewArrival = () => {
               </button>
             </div>
           </div>
+          <div className="w-[200px] h-[4px] bg-prime mt-1"></div>
           <div className="border-b-2 border-b-gray-200 rounded-xl"></div>
 
           <div className="flex ">
             {selectedProduct
-              .slice(0, 6)
+              .slice(0, 5)
               .map((product: TProduct, index: number) => (
                 <div key={product._id} className="flex items-center">
                   <NewArrivalCard product={product} />

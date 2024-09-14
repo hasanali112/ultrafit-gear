@@ -3,6 +3,7 @@ import CategoriesCard from "./CategoriesCard";
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useCategoryGetQuery } from "@/redux/api/categoriesApi";
+import { handleSlider } from "@/utils/utils";
 
 export type TCategory = {
   _id: string;
@@ -19,30 +20,6 @@ const Categories = () => {
     return <p>Lodaing</p>;
   }
 
-  console.log(categoryData);
-
-  const handleRightSide = () => {
-    if (containerRef.current) {
-      const cardWidth =
-        containerRef.current.querySelector("div")?.clientWidth || 0;
-      containerRef.current.scrollTo({
-        left: containerRef.current.scrollLeft + cardWidth,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const handleLeftSide = () => {
-    if (containerRef.current) {
-      const cardWidth =
-        containerRef.current.querySelector("div")?.clientWidth || 0;
-      containerRef.current.scrollTo({
-        left: containerRef.current.scrollLeft - cardWidth,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <div>
       <Container className="relative">
@@ -56,13 +33,13 @@ const Categories = () => {
           <span>
             <div className="hidden absolute top-[55%] group-hover:flex group-hover:justify-between  duration-700 transition-all w-[97%]">
               <button
-                onClick={handleLeftSide}
+                onClick={() => handleSlider(containerRef, "left")}
                 className="bg-[#fbb71c] w-[40px] h-[40px] rounded-full flex justify-center items-center"
               >
                 <ChevronLeft className="text-white" />
               </button>
               <button
-                onClick={handleRightSide}
+                onClick={() => handleSlider(containerRef, "left")}
                 className="bg-[#fbb71c] w-[40px] h-[40px] rounded-full flex justify-center items-center"
               >
                 <ChevronRight className="text-white" />

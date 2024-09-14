@@ -32,10 +32,10 @@ const NewArrivalCard = ({ product }: { product: TProduct }) => {
     <div
       onMouseEnter={handleInterMouseEvent}
       onMouseLeave={handleLeaveMouseEvent}
-      className="mt-8"
+      className="mt-2"
     >
-      <div className="w-[200px] h-[250px]">
-        <div className="flex flex-col justify-center items-center pt-8">
+      <div className="w-[240px] h-[350px]">
+        <div className="flex flex-col justify-center items-center pt-5">
           <motion.img
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -43,7 +43,7 @@ const NewArrivalCard = ({ product }: { product: TProduct }) => {
             src={currentImage}
             alt={product.name}
             loading="lazy"
-            className={`w-[140px] h-[130px] object-cover duration-500 transition-opacity`}
+            className={`w-[190px] h-[170px]  duration-500 transition-opacity`}
           />
           <div className="mt-6">
             <div className="flex items-center justify-center">

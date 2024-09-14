@@ -18,7 +18,7 @@ const Benefit = () => {
   }, []);
 
   return (
-    <div className="relative h-[1000px] bg-[#f1f2f6] mt-20">
+    <div className="relative h-[1100px] bg-[#f1f2f6] mt-36">
       <div className="relative">
         <img
           src={benefitBanner}
@@ -46,8 +46,8 @@ const Benefit = () => {
         </div>
       </div>
       <Container>
-        <div className="bg-[#fff] w-[90%] h-[550px] absolute top-[40%] rounded-md">
-          <div className="flex gap-10">
+        <div className="bg-[#fff] w-[90%] h-[620px] absolute top-[37%] rounded-md">
+          <div className="flex items-center gap-16">
             <div className="relative">
               <img src={dumble} alt="" className="ml-16" />
               <img
@@ -128,6 +128,24 @@ const Benefit = () => {
                   <span className="border rounded-md shrink-0 w-[40px] h-[40px] flex justify-center items-center hover:bg-prime hover:text-white cursor-pointer">
                     <Eye className="w-5 h-5" />
                   </span>
+                </div>
+                <div className="border flex justify-center items-center gap-10 p-3 w-[250px] rounded-md mt-5">
+                  <div>
+                    <h1>23</h1>
+                    <h1 className="font-semibold">d</h1>
+                  </div>
+                  <div>
+                    <h1>15</h1>
+                    <h1 className="font-semibold">h</h1>
+                  </div>
+                  <div>
+                    <h1>05</h1>
+                    <h1 className="font-semibold">m</h1>
+                  </div>
+                  <div>
+                    <h1>45</h1>
+                    <h1 className="font-semibold">s</h1>
+                  </div>
                 </div>
               </div>
             </div>
